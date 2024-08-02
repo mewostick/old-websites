@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <!-- warning; spaghetti down below! -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="🐈 catdomeow.xyz - Link Opener">
+        <meta property="og:description" content="Open any link you desire in a new tab">
+        <meta property="og:url" content="https://catdomeow.xyz/Useful/openlink">
+        <title>🐈&nbsp;&nbsp;Link Opener</title>
+        <link rel="stylesheet" href="../CSS/style.css">
+        <style>
+                #protocolCheckbox + label {
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            font-family: custom;
+                }
+        </style>
+    </head>
+    <body>
+        <canvas class="background"></canvas>
+        <script src="../JavaScript/particles.min.js"></script>
+        <script src="../JavaScript/particles-init.js"></script>
+        <div class="main">
+            <div class="content">
+                <div class="content-container">
+                    <h1>L I N K&nbsp;&nbsp;O P E N E R</h1>
+					<div class="rozdzielacz"></div> 
+                    <p class="tekst">This will allow you to open any link in a new tab.</p>
+                    <p class="tekst">Why? To open any link under Startpage's anonymous view.</p>
+                    <p class="tekst" style="opacity: 50%;">WARNING; the script is goofy and may break on its own. Don't paste!</p>
+                    <br>
+                    <p class="tekst">Put your link in the box (without http:// | https://)</p>
+                    <input type="checkbox" id="protocolCheckbox">
+                    <label for="protocolCheckbox">Use HTTP</label>
+                    <br><br>
+                    <div class="box" contenteditable="true" id="boxContent"></div>
+                    <br>
+                    <a id="generatedLink" class="tekst" href="#" target="_blank">Open in a new tab</a>
+                    <script>
+                        function openLink() {
+                            event.preventDefault();
+                            const box = document.getElementById('boxContent');
+                            const checkbox = document.getElementById('protocolCheckbox');
+                            const protocol = checkbox.checked ? 'http://' : 'https://';
+                            const content = box.textContent.trim();
+                            const encodedContent = encodeURIComponent(content);
+                            const domain = 'catdomeow.xyz'; 
+                            const finalLink = `${protocol}${encodedContent}`;
+                            window.open(finalLink, '_blank');
+                        }
+                    </script>
+                    <br><br>
+                    <p class="tekst" style="opacity: 50%; font-size: 24px;"><a href="https://catdomeow.xyz">go back...</a></p>
+                </div>
+            </div>
+          </div>
+    </body>
+</html>

@@ -1,0 +1,161 @@
+  /* czcionka */
+@font-face {
+    font-family: 'custom';
+    src: url('../Fonts/roboto.ttf') format('truetype');
+  }
+
+body {
+    background-image: url("../Backgrounds/catbackground.jpg");
+    background-color: #baffcf;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* particles */
+  .background {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+   /* pudelko */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(118, 150, 129, 0.85);
+    border-radius: 30px;
+    border: 6px solid rgb(255, 255, 255);
+    padding: 20px;
+  }
+
+  /* szerokosc dla telefonow */
+@media (max-width: 767px) {
+  .main {
+      width: 80%;
+  }
+}
+
+/* szerokosc dla pc */
+@media (min-width: 768px) and (max-width: 2999px) {
+  .main {
+      width: 45%;
+  }
+}
+
+/* szerokosc dla 4K */
+@media (min-width: 3000px) {
+  .main {
+      width: 30%;
+  }
+}
+
+  /* animowany tekst ig */
+  .text-container {
+    height: 100px;
+    overflow: hidden;
+    font-family: custom;
+    font-size: 26px;
+    color: white;
+  }
+
+  /* smieszny rozdzielacz kontentu */
+  .rozdzielacz {
+    border-bottom: 3px solid #fff;
+    border-radius: 5px;
+    height: auto;
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  /* wysokosc tekstu dla telefonow */
+  @media (max-width: 767px) {
+    .text-container {
+        height: 130px;
+    }
+  }
+  
+  /* wysokosc tekstu dla pc */
+  @media (min-width: 768px) {
+    .text-container {
+        height: 100px;
+    }
+  }
+
+  .tekst {
+    font-size: 22px;
+    color:rgb(255, 255, 255, 1.0);
+    font-family: custom;
+  }
+
+  h1 { 
+    font-family: custom;
+  }
+ 
+  /* h1 - rozmiar czcionki dla telefonow */
+  @media (max-width: 767px) {
+    h1 {
+        font-size: 28px;
+    }
+  }
+  
+  /* h1 - rozmiar czcionki dla pc */
+  @media (min-width: 768px) {
+    h1 {
+        font-size: 45px;
+    }
+  }
+
+  h2 {
+    font-family: custom;
+    font-size: 32px;
+    color:white;
+  }
+
+  .tekst a {
+    color: rgb(255, 255, 255);
+  }
+
+  .content {
+    width: 100%;
+  }
+  
+  /* kontener - scroll bar */
+  .content-container {
+    overflow: auto;
+    max-height: 80vh;
+    width: 100%;
+  }
+  
+  /* zawartosc */
+  .content {
+    text-align: center;
+  }
+  
+  .content h1 {
+    margin-bottom: 10px;
+    color:white
+  }
+  
+  .content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .box {
+    width: 200px;
+    height: 100px;
+    border-radius: 30px;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
