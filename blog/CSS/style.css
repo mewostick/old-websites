@@ -1,0 +1,65 @@
+  /* czcionka */
+  @font-face {
+    font-family: 'custom';
+    src: url('../Fonts/roboto.ttf') format('truetype');
+  }
+
+  body {
+    background: linear-gradient(-45deg, #989d5b, #bfc465, #80bf91, #397148);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+    margin: 10px;
+    font-family: custom;
+  }
+
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255, 0.5);  
+    border: 6px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 10px;
+  }
+
+  .content {
+    background-color: solid white;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 46px;
+  }
+
+  .tekst {
+    font-size: 20px;
+    font-family: custom;
+    color: white;
+  }
+
+  .tekst a {
+    font-family: custom;
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+  }
